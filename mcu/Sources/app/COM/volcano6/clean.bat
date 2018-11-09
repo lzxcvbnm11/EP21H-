@@ -1,0 +1,10 @@
+@echo off
+del Edout
+del err.log
+del *.o
+del *.elf
+del *.sx
+del *.lst
+del hello.map
+del v_*
+del *.bak

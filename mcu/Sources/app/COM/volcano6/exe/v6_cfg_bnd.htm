@@ -1,0 +1,399 @@
+<HTML>
+<HEAD>
+    <TITLE>Readme file for Volcano 6 Configuration Tool(s): V6CFG and V6BND</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#0000ff">
+<A NAME="top"></A>
+Readme file for Volcano 6 Configuration Tool(s): V6CFG and V6BND
+<BR>
+    Document: v6_cfg_bnd.htm <BR>
+    Date: 2013-11-21 <BR>
+<BR>
+<H1>V6CFG</H1>
+<BR>
+<OL>
+    <OL>
+        <LI><A HREF="#V6CFG_version">Version</A> </LI>
+        <LI><A HREF="#V6CFG_features">Features</A> </LI>
+        <LI><A HREF="#V6CFG_history">History</A> </LI>
+        <LI><A HREF="#V6CFG_known_problems">Known problems</A> </LI>
+        <LI><A HREF="#V6CFG_fixed_problems">Fixed problems</A> </LI>
+    </OL>
+</OL>
+<BR>
+<H1>V6BND </H1>
+<BR>
+<OL>
+    <OL>
+        <LI><A HREF="#V6BND_version">Version</A> </LI>
+        <LI><A HREF="#V6BND_features">Features</A> </LI>
+        <LI><A HREF="#V6BND_history">History</A> </LI>
+        <LI><A HREF="#V6BND_known_problems">Known problems</A></LI>
+        <LI><A HREF="#V6BND_fixed_problems">Fixed problems</A></LI>
+    </OL>
+</OL>
+<A NAME="V6BND_version"><H1>V6BND: Version</H1></A>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+2013-11-21: V6BND version 9.17<BR>
+<BR>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6BND_features"><H1>V6BND: Features</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<BR>
+<H3><U>V6BND version 9.17:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6BND_history"><H1>V6BND: History</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<H3><U>V6BND version 9.16:</U></H3>
+<UL>
+	<LI> Target added: "DIAB MPC57xx". FlexCAN pin configuration attributes removed. Pin configuration moved to target.c. </LI>
+</UL>
+<H3><U>V6BND version 9.15:</U></H3>
+<UL>
+	<LI> Target added: "COSMIC STAR12 BANKED" </LI>
+</UL>
+<H3><U>V6BND version 9.14:</U></H3>
+<UL>
+	<LI> Target added: "METROWERKS S12X BANKED CONST GLOBAL 128 IMF" </LI>
+	<LI> msCAN12S controller can support 128 immediate frames with the new target. (#00984141 enhancement) </LI>
+</UL>
+<H3><U>V6BND version 9.13:</U></H3>
+<UL>
+	<LI> Configurable clock prescalers are supported in NECUARTD controller. (#00981638) </LI>
+</UL>
+<H3><U>V6BND version 9.12:</U></H3>
+<UL>
+	<LI> Configurable wake up pulse length is supported in NECUARTF controller. (#00955837) </LI>
+</UL>
+<H3><U>V6BND version 9.11:</U></H3>
+<UL>
+	<LI> Configurable wake up pulse length is supported in LINFlex controller. (#00955837) </LI>
+	<LI> AFCAN now supports 64 slots. </LI>
+</UL>
+<H3><U>V6BND version 9.10:</U></H3>
+<UL>
+	<LI> Configurable wake up pulse length is supported in NECUARTD and SCI12LIN controllers. (#00955837) </LI>
+</UL>
+<H3><U>V6BND version 9.09:</U></H3>
+<UL>
+	<LI> TL_Frame Definition updated. </LI>
+</UL>
+<H3><U>V6BND version 9.08:</U></H3>
+<UL>
+	<LI> Controller added: "FlexCAN_gmask" </LI>
+	<LI> Target added: "DIAB MPC56xx" </LI>
+</UL>
+<H3><U>V6BND version 9.07:</U></H3>
+<UL>
+	<LI> Controller added: "AFCAN_78K0R", "NECUARTF" </LI>
+	<LI> Target added: "IAR R8C FARDATA", "IAR 78K0RFX3" </LI>
+</UL>
+<H3><U>V6BND version 9.06:</U></H3>
+<UL>
+	<LI> Initial release for VTP 6.21. </LI>
+	<LI> LIN 2.1 slave support added. </LI>
+	<LI> Target added: "CGT TMS470" </LI>
+</UL>
+<H3><U>V6BND version 9.05:</U></H3>
+<UL>
+	<LI> Target added: "H8S H8SX" </LI>
+</UL>
+<H3><U>V6BND version 9.04:</U></H3>
+<UL>
+	<LI> Controller added: "M16CCAN" </LI>
+	<LI> Target added: "IAR R8C", "COSMIC STAR12X BANKED GLOBAL" </LI>
+</UL>
+<H3><U>V6BND version 9.03:</U></H3>
+<UL>
+	<LI> Controllers added: "NECUARTD" </LI>
+</UL>
+<H3><U>V6BND version 9.02:</U></H3>
+<UL>
+	<LI> Controllers added: "msCAN12S" </LI>
+	<LI> Targets added: "METROWERKS S12 BANKED" </LI>
+</UL>
+<H3><U>V6BND version 9.01:</U></H3>
+<UL>
+	<LI> Initial release for VTP 6.2. </LI>
+	<LI> Controllers added: "LINFlex" </LI>
+	<LI> Controllers updated: "AFCAN" and "SCI12LIN" </LI>
+	<LI> Targets added: "GHS V850" and "DIAB PACE6" </LI>
+</UL>
+<H3><U>V6BND version 8.04:</U></H3>
+<UL>
+	<LI> RCAN updated to VTP 6.1 </LI>
+</UL>
+<H3><U>V6BND version 8.03:</U></H3>
+<UL>
+	<LI> FlexCAN updated to VTP 6.1 </LI>
+</UL>
+<H3><U>V6BND version 8.02:</U></H3>
+<UL>
+	<LI> DCAN updated to VTP 6.1 </LI>
+</UL>
+<H3><U>V6BND version 8.01:</U></H3>
+<UL>
+	<LI> Initial release for VTP 6.1. </LI>
+	<LI> Controllers added: DCAN and msc12s_remote. </LI>
+	<LI> Targets added: "CGT TMS570" and "GHS MPC56xx" </LI>
+</UL>
+<H3><U>V6BND version 7.04:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 7.03:</U></H3>
+<UL>
+	<LI> J1939 DLL and ALD support added. </LI>
+</UL>
+<H3><U>V6BND version 7.02:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 7.01:</U></H3>
+<UL>
+	<LI> Initial release for VTP6.0. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6BND_known_problems"><H1>V6BND: Known problems</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<H3><U>V6BND version 9.17:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6BND_fixed_problems"><H1>V6BND: Fixed problems</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<H3><U>V6BND version 9.17:</U></H3>
+<UL>
+	<LI> Correction in generated DSLM configuration. </LI>
+</UL>
+<H3><U>V6BND version 9.16:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.15:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.14:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.13:</U></H3>
+<UL>
+	<LI> Fix for #00981638: prescaler calculation corrected for NECUARTD and NECUARTF: separate prescalers calculated for each baud rate. Optionally the prescaler indices can be specified. </LI>
+	<LI> Accuracy of the wake up signal length slightly improved for NECUARTD and NECUARTF. </LI>
+</UL>
+<H3><U>V6BND version 9.12:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.11:</U></H3>
+<UL>
+	<LI> Allocation of background buffer ready bits fixed for AFCAN, AFCAN_78K0R, FlexCAN, FlexCAN_gmask, M16CCAN and RCAN. (#00976131) It assures that the correct frame will be read from the controller when checking reception after mode change. </LI>
+	<LI> RCAN allocates background buffer only for interrupt received frames. </LI>
+</UL>
+<H3><U>V6BND version 9.10:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.09:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.08:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.07:</U></H3>
+<UL>
+	<LI> Prescaler calculation enhanced for NECUARTD. (clock in the target file is the peripheral clock) </LI>
+</UL>
+<H3><U>V6BND version 9.06:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.05:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.04:</U></H3>
+<UL>
+	<LI> Special pointer format introduced due to COSMIC S12X far pointers </LI>
+</UL>
+<H3><U>V6BND version 9.03:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.02:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 9.01:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 8.04:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 8.03:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 8.02:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 8.01:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 7.04:</U></H3>
+<UL>
+	<LI> DSLM file support fixed. </LI>
+</UL>
+<H3><U>V6BND version 7.03:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6BND version 7.02:</U></H3>
+<UL>
+	<LI> Fixes #00629321 (unnecessary interrupts - FlexCAN). Fixes #00629712 for FlexCAN (bad text for fatal error F3508). </LI>
+</UL>
+<H3><U>V6BND version 7.01:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<BR>
+<HR>
+<A NAME="V6CFG_version"><H1>V6CFG: Version</H1></A>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+2013-01-17: V6CFG version 9.03<BR>
+<BR>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6CFG_features"><H1>V6CFG: Features</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<BR>
+<H3><U>V6CFG version 9.03:</U></H3>
+<UL>
+	<LI> New consistency checks added for LIN slave network interfaces. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6CFG_history"><H1>V6CFG: History</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<H3><U>V6CFG version 9.02:</U></H3>
+<UL>
+	<LI> Initial release for VTP 6.21. </LI>
+	<LI> LIN 2.1 slave support added. </LI>
+</UL>
+<H3><U>V6CFG version 9.01:</U></H3>
+<UL>
+	<LI> Initial release for VTP 6.2. </LI>
+</UL>
+<H3><U>V6CFG version 8.01:</U></H3>
+<UL>
+	<LI> Initial release for VTP 6.1. </LI>
+</UL>
+<H3><U>V6CFG version 7.02:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6CFG version 7.01:</U></H3>
+<UL>
+	<LI> Initial release for VTP6.0. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6CFG_known_problems"><H1>V6CFG: Known problems</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<H3><U>V6CFG version 9.03:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<A NAME="V6CFG_fixed_problems"><H1>V6CFG: Fixed problems</H1></A><BR>
+<table width="100%" border=0>
+        <tr>
+            <td width="10%"></td><td>
+<H3><U>V6CFG version 9.03:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6CFG version 9.02:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6CFG version 9.01:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6CFG version 8.01:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<H3><U>V6CFG version 7.02:</U></H3>
+<UL>
+	<LI> Fix for #00619237 (no warning for lack of nm_interest_mask), #00633450 (no error for protocol vs. bus type incompatibility). </LI>
+</UL>
+<H3><U>V6CFG version 7.01:</U></H3>
+<UL>
+	<LI> None. </LI>
+</UL>
+<A HREF="#top">Top</A><BR>
+                      </td><td width="10%"></td>
+        </tr>
+</table>
+<BR>
+<HR>
+Copyright Mentor Graphics 2010. All rights reserved.
+</body>
+</html>

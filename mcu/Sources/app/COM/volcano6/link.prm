@@ -1,0 +1,49 @@
+/*   MCU: S9S12G128													*/
+/*																	*/
+/*  RAM range:														*/
+/*     0x2000 - 0x3fff              8k								*/
+/*																	*/
+/*   Flash ranges:													*/
+/*     0x1400 - 0x1fff:  0xC page   3k								*/
+/*     0x4000 - 0x7fff:  0xD page  16k								*/
+/*     0x8000 - 0xbfff:  paging window (default is 0xE page)  16k	*/
+/*     0xc000 - 0xffff:  0xF page  16k								*/
+
+NAMES
+END
+
+ENTRIES
+v_nvram.o:*
+END
+
+SEGMENTS
+    RAM = READ_WRITE 0x2000 TO 0x2FFF;
+	
+	/* VOLCANO RAM */
+    V5RAM = READ_WRITE 0x3000 TO 0x3FFF;
+
+    /* unbanked FLASH ROM (Page 0xF) */
+    ROM_1 = READ_ONLY  0xC000 TO 0xFF00;
+	
+    /* VOLCANO_ROM (Page 0xD) */
+    VOLCANO5_ROM    = READ_ONLY 0x4000 TO 0x50ff;
+
+END
+
+PLACEMENT
+
+    _PRESTART, STARTUP, MSCAN_INTVECT_SEG,
+    ROM_VAR, NON_BANKED,
+    STRINGS, DEFAULT_ROM,
+    COPY                    INTO  ROM_1;
+    DEFAULT_RAM             INTO  RAM;
+    V5_NVRAM                INTO  VOLCANO5_ROM;
+END
+
+
+STACKSIZE 0x200
+
+VECTOR 0  _Startup
+VECTOR 39 mscan_tx_handler
+VECTOR 38 mscan_rx_handler
+VECTOR 37 mscan_err_handler

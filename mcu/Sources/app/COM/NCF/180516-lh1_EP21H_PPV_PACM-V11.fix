@@ -1,0 +1,464 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                    Mentor Graphics Corporation                             */
+/*                        All rights reserved                                 */
+/*                                                                            */
+/* ************************************************************************** */
+/*                                                                            */
+/*  Description:   Fixed file for Volcano 6.2                                 */
+/*  Node:          PACM                                                       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+fixed_file;
+volcano version "6.2";
+
+volcano processing period 5 ms;
+	/*	PACM_HSC4/PACM_ifc0	*/
+network interface PACM_HSC4 {
+	Baud rate 500 kHz;
+
+	supports mode FM_Normal_HS;
+	supports mode FM_Quiet_HS;
+	supports mode FM_Silent_HS;
+
+	transmit interrupt true;
+	receive interrupt true;
+}
+
+/*	Subscribed Signals	PACM_HSC4	*/
+signal BCMAvlbly{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal busoff_decrement_time{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal busoff_max{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal busoff_time{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal busoff_wait_time{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal CalendarDay{
+	subscribed;
+	type unsigned;
+	size 5 bits;
+}
+
+signal CalendarMonth{
+	subscribed;
+	type unsigned;
+	size 4 bits;
+}
+
+signal CalendarYear{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal communication_timeout_time_slave{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal DiagnosticFuncAddrReq{
+	subscribed;
+	type bytes;
+	size 8 bytes;
+}
+
+signal DiagnosticReqPACM{
+	subscribed;
+	type bytes;
+	size 8 bytes;
+}
+
+signal ECMAvlbly{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal EnSpd{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal EnSpdSts{
+	subscribed;
+	type unsigned;
+	size 2 bits;
+}
+
+signal EPBAvlbly{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal EPBSts{
+	subscribed;
+	type unsigned;
+	size 2 bits;
+}
+
+signal EPTAccelActuPos{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal EPTAccelActuPosV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal EPTRdy{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal EPTStCmdOn{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal HCUAvlbly{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal HourOfDay{
+	subscribed;
+	type unsigned;
+	size 5 bits;
+}
+
+signal keep_network_timeout_time_slave{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal LDircnIO{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal local_signal_config_id{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal MinuteOfHour{
+	subscribed;
+	type unsigned;
+	size 6 bits;
+}
+
+signal NCFRefNoPACM{
+	subscribed;
+	type bytes;
+	size 8 bytes;
+}
+
+signal network_mode{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal PedtrnAdoWrnng{
+	subscribed;
+	type unsigned;
+	size 4 bits;
+}
+
+signal PedtrnAlrtInhSwReq{
+	subscribed;
+	type unsigned;
+	size 2 bits;
+}
+
+signal PedtrnAlrtSndSltReq{
+	subscribed;
+	type unsigned;
+	size 2 bits;
+}
+
+signal PedtrnAlrtSndSltReqV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal PedtrnAlrtVolSwReq{
+	subscribed;
+	type unsigned;
+	size 4 bits;
+}
+
+signal PedtrnAlrtVolSwReqV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal PwrMdMstrAccryA{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal PwrMdMstrRunCrkA{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal RDircnIO{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal RstrFctryDeftsReq{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal SCSAvlbly{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal SecsOfMinute{
+	subscribed;
+	type unsigned;
+	size 6 bits;
+}
+
+signal signal_config_id{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal stay_in_busoff{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal stay_in_expulsion{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal SysBPM{
+	subscribed;
+	type unsigned;
+	size 2 bits;
+}
+
+signal SysBPMEnbd{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal SysPwrMd{
+	subscribed;
+	type unsigned;
+	size 2 bits;
+}
+
+signal TCAvlbly{
+	subscribed;
+	type boolean;
+	size 1 bits;
+}
+
+signal TMSpd{
+	subscribed;
+	type unsigned;
+	size 16 bits;
+}
+
+signal TMSpdV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal TrShftLvrPos{
+	subscribed;
+	type unsigned;
+	size 4 bits;
+}
+
+signal TrShftLvrPosV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal VehOdo{
+	subscribed;
+	type unsigned;
+	size 24 bits;
+}
+
+signal VehOdoV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal VehSpdAvgDrvn{
+	subscribed;
+	type unsigned;
+	size 15 bits;
+}
+
+signal VehSpdAvgDrvnV{
+	subscribed;
+	type unsigned;
+	size 1 bits;
+}
+
+signal wait_for_network_sleep_time_slave{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal wakeup_network_signal_time_slave{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal wakeup_network_time_slave{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+signal wakeup_pending_time_slave{
+	subscribed;
+	type unsigned;
+	size 8 bits;
+}
+
+/*	Published Signals	PACM_HSC4	*/
+signal DiagnosticRespPACM{
+	published;
+	type bytes;
+	size 8 bytes;
+}
+
+signal DTCInfomationPACM{
+	published;
+	type bytes;
+	size 7 bytes;
+}
+
+signal keep_network_PACM{
+	published;
+	type boolean;
+	size 1 bits;
+}
+
+signal PACMFlt{
+	published;
+	type boolean;
+	size 1 bits;
+}
+
+signal PedtrnAlrtCtlSysFlt{
+	published;
+	type boolean;
+	size 1 bits;
+}
+
+signal PedtrnAlrtInh{
+	published;
+	type unsigned;
+	size 2 bits;
+}
+
+signal PedtrnAlrtSndSltSts{
+	published;
+	type unsigned;
+	size 2 bits;
+}
+
+signal PedtrnAlrtSpkrFlt{
+	published;
+	type boolean;
+	size 1 bits;
+}
+
+signal PedtrnAlrtVolSwSts{
+	published;
+	type unsigned;
+	size 4 bits;
+}
+
+signal wake_network_PACM{
+	published;
+	type boolean;
+	size 1 bits;
+}
+
+/*	Immediate Signal Groups	*/
+immediate frame DIAG_PhysResp_PACM {
+	transmitted;
+	contains signal DiagnosticRespPACM;
+	}
+immediate frame DIAG_FuncReq_HSC4 {
+	received;
+	contains signal DiagnosticFuncAddrReq;
+	}
+immediate frame DIAG_PhysReq_PACM {
+	received;
+	contains signal DiagnosticReqPACM;
+	}
+immediate frame GW_HSC4_FrI01 {
+	received;
+	contains signal network_mode;
+	contains signal signal_config_id;
+	}

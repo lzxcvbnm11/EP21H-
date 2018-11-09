@@ -1,0 +1,789 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                    Mentor Graphics Corporation                             */
+/*                        All rights reserved                                 */
+/*                                                                            */
+/* ************************************************************************** */
+/*                                                                            */
+/*  Description:   Network file for Volcano 6.2                               */
+/*  Project:       EP2X                                                       */
+/*  Release:       EP21H_PPV_V11                                              */
+/*  Configuration: EP21H_PPV_V11_base                                         */
+/*  Node:          PACM                                                       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+network_file;
+volcano version "6.2";
+
+/* Frames */
+
+/* PACM_HSC4 */
+/* PACM_ifc0 */
+
+/* Received Frames */
+signal frame FICM_HSC4_FrP01 {
+	received;
+	/* identifier = 0x36B; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: FICM_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS */
+	/* period = 100 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal PedtrnAlrtInhSwReqHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 1 bits;
+	}
+	signal PedtrnAlrtSndSltReqHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 24 bits;
+	}
+	signal PedtrnAlrtSndSltReqVHSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 40 bits;
+	}
+	signal PedtrnAlrtVolSwReqHSC4 {
+		type unsigned;
+		size 4 bits;
+		offset 52 bits;
+	}
+	signal PedtrnAlrtVolSwReqVHSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 51 bits;
+	}
+}
+signal frame FICM_HSC4_FrP02 {
+	received;
+	/* identifier = 0x376; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: FICM_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS */
+	/* period = 100 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal RstrFctryDeftsReqHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 0 bits;
+	}
+}
+signal frame GW_HSC4_BCM_FrP04 {
+	received;
+	/* identifier = 0x46A; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 10 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal LDircnIOHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 29 bits;
+	}
+	signal RDircnIOHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 30 bits;
+	}
+}
+signal frame GW_HSC4_BCM_FrP07 {
+	received;
+	/* identifier = 0x1F2; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 20 ms; */
+	/* offset = 0 ms; */
+	frame size 2 bytes;
+	dlc_check_mode permissive;
+	endianness big;
+	signal SysBPMHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 12 bits;
+	}
+	signal SysBPMEnbdHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 14 bits;
+	}
+}
+signal frame GW_HSC4_ECM_FrP04 {
+	received;
+	/* identifier = 0x194; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 25 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal TrShftLvrPosV_h1HSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 36 bits;
+	}
+	signal TrShftLvrPos_h1HSC4 {
+		type unsigned;
+		size 4 bits;
+		offset 32 bits;
+	}
+}
+signal frame GW_HSC4_EPB_FrP00 {
+	received;
+	/* identifier = 0x230; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 1000 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal EPBStsHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 52 bits;
+	}
+}
+signal frame GW_HSC4_FrP00 {
+	received;
+	/* identifier = 0x169; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 20 ms; */
+	/* offset = 0 ms; */
+	frame size 6 bytes;
+	dlc_check_mode permissive;
+	endianness big;
+	signal BCMAvlbly_h4HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 23 bits;
+	}
+	signal ECMAvlbly_h4HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 47 bits;
+	}
+	signal EPBAvlbly_h4HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 40 bits;
+	}
+	signal HCUAvlbly_h4HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 36 bits;
+	}
+	signal SCSAvlbly_h4HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 44 bits;
+	}
+	signal TCAvlbly_h4HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 32 bits;
+	}
+}
+signal frame GW_HSC4_FrP01 {
+	received;
+	/* identifier = 0x1F1; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 20 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal PwrMdMstrAccryA_h4HSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 58 bits;
+	}
+	signal PwrMdMstrRunCrkA_h4HSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 59 bits;
+	}
+	signal SysPwrMd_h4HSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 56 bits;
+	}
+}
+signal frame GW_HSC4_FrP08 {
+	received;
+	/* identifier = 0x540; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 1000 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal VehOdoV_h4HSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 39 bits;
+	}
+	signal VehOdo_h4HSC4 {
+		type unsigned;
+		size 24 bits;
+		offset 40 bits;
+	}
+}
+signal frame GW_HSC4_HCU_FrP00 {
+	received;
+	/* identifier = 0x0AF; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 10 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal EPTAccelActuPosHSC4 {
+		type unsigned;
+		size 8 bits;
+		offset 56 bits;
+	}
+	signal EPTAccelActuPosVHSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 19 bits;
+	}
+	signal EPTStCmdOn_h1HSC4 {
+		type boolean;
+		size 1 bits;
+		offset 41 bits;
+	}
+	signal TMSpdV_h1HSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 16 bits;
+	}
+	signal TMSpd_h1HSC4 {
+		type unsigned;
+		size 16 bits;
+		offset 0 bits;
+	}
+}
+signal frame GW_HSC4_HCU_FrP01 {
+	received;
+	/* identifier = 0x196; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 20 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal EPTRdy_h1HSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 30 bits;
+	}
+}
+signal frame GW_HSC4_SCS_FrP15 {
+	received;
+	/* identifier = 0x353; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 100 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal VehSpdAvgDrvnHSC4 {
+		type unsigned;
+		size 15 bits;
+		offset 48 bits;
+	}
+	signal VehSpdAvgDrvnVHSC4 {
+		type unsigned;
+		size 1 bits;
+		offset 63 bits;
+	}
+}
+signal frame IECU_HSC4_FrP01 {
+	received;
+	/* identifier = 0x390; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: iECU_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* period = 100 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal PedtrnAdoWrnngHSC4 {
+		type unsigned;
+		size 4 bits;
+		offset 4 bits;
+	}
+}
+signal frame IPK_HSC4_FrP06 {
+	received;
+	/* identifier = 0x541; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: IPK_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS */
+	/* period = 200 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal CalendarDayHSC4 {
+		type unsigned;
+		size 5 bits;
+		offset 40 bits;
+	}
+	signal CalendarMonthHSC4 {
+		type unsigned;
+		size 4 bits;
+		offset 48 bits;
+	}
+	signal CalendarYearHSC4 {
+		type unsigned;
+		size 8 bits;
+		offset 56 bits;
+	}
+	signal HourOfDayHSC4 {
+		type unsigned;
+		size 5 bits;
+		offset 32 bits;
+	}
+	signal MinuteOfHourHSC4 {
+		type unsigned;
+		size 6 bits;
+		offset 24 bits;
+	}
+	signal SecsOfMinuteHSC4 {
+		type unsigned;
+		size 6 bits;
+		offset 16 bits;
+	}
+}
+signal frame Tester_HSC4_ECM_FrP00 {
+	received;
+	/* identifier = 0x0C9; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* Publisher: Tester_HSC4 */
+	/* Transmit Timing */
+	/* main */
+	/* period = 10 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal EnSpdStsHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 40 bits;
+	}
+	signal EnSpd_h4HSC4 {
+		type unsigned;
+		size 16 bits;
+		offset 48 bits;
+	}
+}
+
+/* Transmitted Frames */
+signal frame DIAG_DTCInfo_PACM {
+	sporadic transmit;
+	/* identifier = 0x7BA; */
+	/* FM_Normal_HS */
+	/* period = 995 ms; */
+	frame size 7 bytes;
+	endianness big;
+	signal DTCInfomationPACMHSC4 {
+		type bytes;
+		size 7 bytes;
+		offset 0 bits;
+	}
+}
+signal frame PACM_HSC1_FrP00 {
+	periodic transmit;
+	/* identifier = 0x36C; */
+	/* FM_Normal_HS */
+	/* period = 100 ms; */
+	/* offset = 0 ms; */
+	frame size 8 bytes;
+	endianness big;
+	signal PACMFltHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 61 bits;
+	}
+	signal PedtrnAlrtCtlSysFltHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 60 bits;
+	}
+	signal PedtrnAlrtInhHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 56 bits;
+	}
+	signal PedtrnAlrtSndSltStsHSC4 {
+		type unsigned;
+		size 2 bits;
+		offset 58 bits;
+	}
+	signal PedtrnAlrtSpkrFltHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 62 bits;
+	}
+	signal PedtrnAlrtVolSwStsHSC4 {
+		type unsigned;
+		size 4 bits;
+		offset 52 bits;
+	}
+}
+signal frame PACM_HSC4_FrP01 {
+	periodic transmit;
+	/* identifier = 0x449; */
+	/* FM_Normal_HS */
+	/* period = 100 ms; */
+	/* offset = 0 ms; */
+	frame size 1 bytes;
+	endianness big;
+	signal keep_network_PACMHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 0 bits;
+		update bit 1;
+	}
+}
+signal frame PACM_HSC4_FS00 {
+	sporadic transmit;
+	/* identifier = 0x441; */
+	/* FM_Normal_HS */
+	/* period = 15 ms; */
+	/* FM_Silent_HS */
+	/* period = 15 ms; */
+	frame size 1 bytes;
+	endianness big;
+	signal wake_network_PACMHSC4 {
+		type boolean;
+		size 1 bits;
+		offset 0 bits;
+		update bit 1;
+	}
+}
+
+/* Immediate Frames */
+
+/* PACM_HSC4 */
+/* PACM_ifc0 */
+
+/* Received Immediate Frames */
+immediate frame DIAG_FuncReq_HSC4 {
+	/* identifier = 0x7DF; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* FM_Quiet_HS */
+	/* FM_Silent_HS */
+	/* Publisher: DIAG_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* TxInterval = 10 ms; */
+	/* FM_Quiet_HS4 */
+	/* TxInterval = 10 ms; */
+	/* FM_Silent_HS4 */
+	/* TxInterval = 10 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal DiagnosticFuncAddrReq {
+		offset 0 bits;
+	}
+}
+immediate frame DIAG_PhysReq_PACM {
+	/* identifier = 0x763; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* FM_Quiet_HS */
+	/* FM_Silent_HS */
+	/* Publisher: DIAG_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* TxInterval = 10 ms; */
+	/* FM_Quiet_HS4 */
+	/* TxInterval = 10 ms; */
+	/* FM_Silent_HS4 */
+	/* TxInterval = 10 ms; */
+	frame size 8 bytes;
+	dlc_check_mode strict;
+	endianness big;
+	signal DiagnosticReqPACM {
+		offset 0 bits;
+	}
+}
+immediate frame GW_HSC4_FrI01 {
+	/* identifier = 0x41F; */
+	/* Receive Modes */
+	/* FM_Normal_HS */
+	/* FM_Silent_HS */
+	/* Publisher: GW_HSC4 */
+	/* Transmit Timing */
+	/* FM_Normal_HS4 */
+	/* TxInterval = 50 ms; */
+	/* FM_Silent_HS4 */
+	/* TxInterval = 50 ms; */
+	frame size 3 bytes;
+	dlc_check_mode permissive;
+	endianness big;
+	signal network_mode {
+		offset 16 bits;
+	}
+	signal signal_config_id {
+		offset 0 bits;
+	}
+}
+
+/* Transmitted Immediate Frames */
+immediate frame DIAG_PhysResp_PACM {
+	/* identifier = 0x76B; */
+	/* FM_Normal_HS */
+	/* TxInterval = 10 ms; */
+	/* FM_Quiet_HS */
+	/* TxInterval = 10 ms; */
+	/* FM_Silent_HS */
+	/* TxInterval = 10 ms; */
+	frame size 8 bytes;
+	endianness big;
+	signal DiagnosticRespPACM {
+		offset 0 bits;
+	}
+}
+
+/* Frame Modes */
+frame mode FM_Normal_HS {
+	/* Rx Frames */
+	carries frame DIAG_FuncReq_HSC4;
+	carries frame DIAG_PhysReq_PACM;
+	carries frame FICM_HSC4_FrP01;
+	carries frame FICM_HSC4_FrP02;
+	carries frame GW_HSC4_BCM_FrP04;
+	carries frame GW_HSC4_BCM_FrP07;
+	carries frame GW_HSC4_ECM_FrP04;
+	carries frame GW_HSC4_EPB_FrP00;
+	carries frame GW_HSC4_FrI01;
+	carries frame GW_HSC4_FrP00;
+	carries frame GW_HSC4_FrP01;
+	carries frame GW_HSC4_FrP08;
+	carries frame GW_HSC4_HCU_FrP00;
+	carries frame GW_HSC4_HCU_FrP01;
+	carries frame GW_HSC4_SCS_FrP15;
+	carries frame IECU_HSC4_FrP01;
+	carries frame IPK_HSC4_FrP06;
+	carries frame Tester_HSC4_ECM_FrP00;
+	/* Tx Frames */
+	carries frame DIAG_DTCInfo_PACM;
+	carries frame DIAG_PhysResp_PACM;
+	carries frame PACM_HSC1_FrP00;
+	carries frame PACM_HSC4_FrP01;
+	carries frame PACM_HSC4_FS00;
+	periodic {
+		frame PACM_HSC1_FrP00 every 100 ms offset 0 us;
+		frame PACM_HSC4_FrP01 every 100 ms offset 0 us;
+	}	/* periodic */
+}	/* mode */
+
+frame mode FM_Quiet_HS {
+	/* Rx Frames */
+	carries frame DIAG_FuncReq_HSC4;
+	carries frame DIAG_PhysReq_PACM;
+	/* Tx Frames */
+	carries frame DIAG_PhysResp_PACM;
+	periodic {
+	}	/* periodic */
+}	/* mode */
+
+frame mode FM_Silent_HS {
+	/* Rx Frames */
+	carries frame DIAG_FuncReq_HSC4;
+	carries frame DIAG_PhysReq_PACM;
+	carries frame GW_HSC4_FrI01;
+	/* Tx Frames */
+	carries frame DIAG_PhysResp_PACM;
+	carries frame PACM_HSC4_FS00;
+	periodic {
+	}	/* periodic */
+}	/* mode */
+
+
+/* Interfaces */
+	/*	PACM_HSC4/PACM_ifc0	*/
+network interface PACM_HSC4 {
+	protocol CAN11 {
+	priority_bits 11;
+	filter_bits 0;
+	prescale 4;
+	prop_seg 3;
+	phase_seg1 2;
+	phase_seg2 2;
+	sjw 2;
+	nsamples = 1;
+	interest_mask "xxxxxxxxxxx" if_required;
+	frame DIAG_DTCInfo_PACM size 7 ID 0x7BA;	//Tx
+	frame DIAG_FuncReq_HSC4 size 8 ID 0x7DF;	//Rx
+	frame DIAG_PhysReq_PACM size 8 ID 0x763;	//Rx
+	frame DIAG_PhysResp_PACM size 8 ID 0x76B;	//Tx
+	frame FICM_HSC4_FrP01 size 8 ID 0x36B;	//Rx
+	frame FICM_HSC4_FrP02 size 8 ID 0x376;	//Rx
+	frame GW_HSC4_BCM_FrP04 size 8 ID 0x46A;	//Rx
+	frame GW_HSC4_BCM_FrP07 size 2 ID 0x1F2;	//Rx
+	frame GW_HSC4_ECM_FrP04 size 8 ID 0x194;	//Rx
+	frame GW_HSC4_EPB_FrP00 size 8 ID 0x230;	//Rx
+	frame GW_HSC4_FrI01 size 3 ID 0x41F;	//Rx
+	frame GW_HSC4_FrP00 size 6 ID 0x169;	//Rx
+	frame GW_HSC4_FrP01 size 8 ID 0x1F1;	//Rx
+	frame GW_HSC4_FrP08 size 8 ID 0x540;	//Rx
+	frame GW_HSC4_HCU_FrP00 size 8 ID 0x0AF;	//Rx
+	frame GW_HSC4_HCU_FrP01 size 8 ID 0x196;	//Rx
+	frame GW_HSC4_SCS_FrP15 size 8 ID 0x353;	//Rx
+	frame IECU_HSC4_FrP01 size 8 ID 0x390;	//Rx
+	frame IPK_HSC4_FrP06 size 8 ID 0x541;	//Rx
+	frame PACM_HSC1_FrP00 size 8 ID 0x36C;	//Tx
+	frame PACM_HSC4_FrP01 size 1 ID 0x449;	//Tx
+	frame PACM_HSC4_FS00 size 1 ID 0x441;	//Tx
+	frame Tester_HSC4_ECM_FrP00 size 8 ID 0x0C9;	//Rx
+	platform TRANSPORT_OPTIONAL {
+		}//transport
+	}//protocol
+}//interface
+
+
+/* Signal Mappings */
+
+/* PACM/PACM_HSC4 */
+	map signal from application DTCInfomationPACM to DTCInfomationPACMHSC4;
+	map signal from application keep_network_PACM to keep_network_PACMHSC4;
+	map signal from application PACMFlt to PACMFltHSC4;
+	map signal from application PedtrnAlrtCtlSysFlt to PedtrnAlrtCtlSysFltHSC4;
+	map signal from application PedtrnAlrtInh to PedtrnAlrtInhHSC4;
+	map signal from application PedtrnAlrtSndSltSts to PedtrnAlrtSndSltStsHSC4;
+	map signal from application PedtrnAlrtSpkrFlt to PedtrnAlrtSpkrFltHSC4;
+	map signal from application PedtrnAlrtVolSwSts to PedtrnAlrtVolSwStsHSC4;
+	map signal from application wake_network_PACM to wake_network_PACMHSC4;
+	map signal from BCMAvlbly_h4HSC4 to application BCMAvlbly;
+	map signal from CalendarDayHSC4 to application CalendarDay;
+	map signal from CalendarMonthHSC4 to application CalendarMonth;
+	map signal from CalendarYearHSC4 to application CalendarYear;
+	map signal from ECMAvlbly_h4HSC4 to application ECMAvlbly;
+	map signal from EnSpd_h4HSC4 to application EnSpd;
+	map signal from EnSpdStsHSC4 to application EnSpdSts;
+	map signal from EPBAvlbly_h4HSC4 to application EPBAvlbly;
+	map signal from EPBStsHSC4 to application EPBSts;
+	map signal from EPTAccelActuPosHSC4 to application EPTAccelActuPos;
+	map signal from EPTAccelActuPosVHSC4 to application EPTAccelActuPosV;
+	map signal from EPTRdy_h1HSC4 to application EPTRdy;
+	map signal from EPTStCmdOn_h1HSC4 to application EPTStCmdOn;
+	map signal from HCUAvlbly_h4HSC4 to application HCUAvlbly;
+	map signal from HourOfDayHSC4 to application HourOfDay;
+	map signal from LDircnIOHSC4 to application LDircnIO;
+	map signal from MinuteOfHourHSC4 to application MinuteOfHour;
+	map signal from PedtrnAdoWrnngHSC4 to application PedtrnAdoWrnng;
+	map signal from PedtrnAlrtInhSwReqHSC4 to application PedtrnAlrtInhSwReq;
+	map signal from PedtrnAlrtSndSltReqHSC4 to application PedtrnAlrtSndSltReq;
+	map signal from PedtrnAlrtSndSltReqVHSC4 to application PedtrnAlrtSndSltReqV;
+	map signal from PedtrnAlrtVolSwReqHSC4 to application PedtrnAlrtVolSwReq;
+	map signal from PedtrnAlrtVolSwReqVHSC4 to application PedtrnAlrtVolSwReqV;
+	map signal from PwrMdMstrAccryA_h4HSC4 to application PwrMdMstrAccryA;
+	map signal from PwrMdMstrRunCrkA_h4HSC4 to application PwrMdMstrRunCrkA;
+	map signal from RDircnIOHSC4 to application RDircnIO;
+	map signal from RstrFctryDeftsReqHSC4 to application RstrFctryDeftsReq;
+	map signal from SCSAvlbly_h4HSC4 to application SCSAvlbly;
+	map signal from SecsOfMinuteHSC4 to application SecsOfMinute;
+	map signal from SysBPMHSC4 to application SysBPM;
+	map signal from SysBPMEnbdHSC4 to application SysBPMEnbd;
+	map signal from SysPwrMd_h4HSC4 to application SysPwrMd;
+	map signal from TCAvlbly_h4HSC4 to application TCAvlbly;
+	map signal from TMSpd_h1HSC4 to application TMSpd;
+	map signal from TMSpdV_h1HSC4 to application TMSpdV;
+	map signal from TrShftLvrPos_h1HSC4 to application TrShftLvrPos;
+	map signal from TrShftLvrPosV_h1HSC4 to application TrShftLvrPosV;
+	map signal from VehOdo_h4HSC4 to application VehOdo;
+	map signal from VehOdoV_h4HSC4 to application VehOdoV;
+	map signal from VehSpdAvgDrvnHSC4 to application VehSpdAvgDrvn;
+	map signal from VehSpdAvgDrvnVHSC4 to application VehSpdAvgDrvnV;
+	map signal from stale constant 200 to application busoff_decrement_time;
+	map signal from stale constant 15 to application busoff_max;
+	map signal from stale constant 50 to application busoff_time;
+	map signal from stale constant 200 to application busoff_wait_time;
+	map signal from stale constant 1500 to application communication_timeout_time_slave;
+	map signal from stale constant 100 to application keep_network_timeout_time_slave;
+	map signal from stale constant 28673 to application local_signal_config_id;
+	map signal from stale constant { 0x61, 0x01, 0x1f, 0x10, 0x62, 0x21, 0x17, 0x11 } to application NCFRefNoPACM;
+	map signal from stale constant false to application stay_in_busoff;
+	map signal from stale constant false to application stay_in_expulsion;
+	map signal from stale constant 28 to application wait_for_network_sleep_time_slave;
+	map signal from stale constant 14 to application wakeup_network_signal_time_slave;
+	map signal from stale constant 20 to application wakeup_network_time_slave;
+	map signal from stale constant 20 to application wakeup_pending_time_slave;
+
+/* Gateways */
+
+/* Initialisation Values */
+	initial value PedtrnAlrtSndSltReqV = 1;
+	initial value PedtrnAlrtVolSwReq = 6;
+	initial value PedtrnAlrtVolSwReqV = 1;
+	initial value signal_config_id = 28673;
+	initial value TMSpd = 32768;
+	initial value TMSpdV = 1;
+	initial value PedtrnAlrtVolSwSts = 6;

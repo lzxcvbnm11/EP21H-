@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                    Mentor Graphics Corporation                             */
+/*                        All rights reserved                                 */
+/*                                                                            */
+/* ************************************************************************** */
+/*                                                                            */
+/*  Description:   Target file for Volcano 6.2                                */
+/*  Project:       EP2X                                                       */
+/*  Release:       EP21H_PPV_V11                                              */
+/*  Configuration: EP21H_PPV_V11_base                                         */
+/*  Node:          PACM                                                       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+target_file;
+volcano version "6.23";
+
+target "METROWERKS S12 BANKED";
+RAM 0x00002F00 to 0x00003FFF;
+NVRAM 0x00004000 to 0x000050FF;
+network interface PACM_HSC4 {
+	controller "msCAN12S";
+	base 0x00000140;
+	clock frequency 16 MHz;
+	attributes {
+		loopback = 0;
+		clock_source = 1;
+		wake_up_mode = 0;
+		can_stop_in_wait_mode = 0;
+		wake_up_enable = 1;
+		canrier = 0x50;
+		driver_version = 2;
+		}
+}
